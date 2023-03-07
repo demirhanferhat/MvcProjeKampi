@@ -13,17 +13,29 @@ namespace MvcProjeKampi.Controllers
         // GET: Istatistik
         public ActionResult Index()
         {
-            var toplamSayi = db.Categories.Count();
+            var toplamSayi = db.Categories.Count(); // Toplam kategori sayısı 
             ViewBag.ToplamSayi = toplamSayi;
 
-            var trueSayi = db.Categories.Count(x => x.CategoryStatus == true);
+            var yazilimSayi = db.Headings.Count(x => x.HeadingName == "Yazılım").ToString(); //Başlık tablosunda "yazılım" kategorisine ait başlık sayısı
+            ViewBag.YazilimSayi = yazilimSayi;
+
+            var writerA = db.Writers.Count(x => x.WriterName.Contains("a")); //Yazar adında 'a' harfi geçen yazar sayısı
+            ViewBag.WriterA = writerA;
+
+            var enfazlaSayi = db.Headings.Max(x => x.Category.CategoryName); // En fazla başlığa sahip kategori adı
+            ViewBag.EnfazlaSayi = enfazlaSayi;
+
+            var truefalseFark = db.Categories.Count(x => x.CategoryStatus == true) - db.Categories.Count(x => x.CategoryStatus == false);
+            ViewBag.TruefalseFark = truefalseFark;
+
+            var trueSayi = db.Categories.Count(x => x.CategoryStatus == true); // True Sayısı
             ViewBag.AktifSayi = trueSayi;
 
-            var falseSayi = db.Categories.Count(x => x.CategoryStatus == false);
+            var falseSayi = db.Categories.Count(x => x.CategoryStatus == false); // False Sayısı
             ViewBag.FalseSayi = falseSayi;
 
-            var enfazlaSayi = db.Headings.Max(x => x.Category.CategoryName);
-            ViewBag.EnfazlaSayi = enfazlaSayi;
+            var yazarSayisi = db.Writers.Count(); // Yazar Sayısı
+            ViewBag.YazarSayisi = yazarSayisi;
 
 
             return View();
