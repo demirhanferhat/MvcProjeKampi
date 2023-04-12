@@ -14,6 +14,7 @@ namespace EntitiyLayer.Concrete
         [StringLength(50)]
         public string HeadingName { get; set; }
         public DateTime HeadingDate { get; set; }
+        public bool HeadingStatus { get; set; }
 
         //Category Id ile Heading ilişkilendirilme alanı yani açılan kapı ile buradan oraya gidiyoruz
         public int CategoryID { get; set; }

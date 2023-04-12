@@ -15,9 +15,9 @@ namespace EntitiyLayer.Concrete
         public string WriterName { get; set; }
         [StringLength(50)]
         public string WriterSurname { get; set; }
-        [StringLength(100)]
+        [StringLength(500)]
         public string WriterImage { get; set; }
-        [StringLength(100)]
+        [StringLength(500)]
         public string WriterAbout { get; set; }
         [StringLength(200)]
         public string WriterMail { get; set; }
@@ -26,10 +26,12 @@ namespace EntitiyLayer.Concrete
         [StringLength(50)]
         public string WriterTitle { get; set; }
 
+        public bool WriterStatus { get; set; }
+
         //Writer ile Heading ilişkilendirilme alanı yani buraya kapı açmıs oluyoruz
         public ICollection<Heading> Headings { get; set; }
 
         //Writer ile Content ilişkilendirilme alanı yani buraya kapı açmıs oluyoruz
-        public ICollection<Content> Contents { get; set; }"1
+        public ICollection<Content> Contents { get; set; }
     }
 }

@@ -57,6 +57,7 @@
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
+    <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepostory.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
+    <Compile Include="EntityFramework\EfMessageDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202303091218544_mig_writerEdit.cs" />
     <Compile Include="Migrations\202303091218544_mig_writerEdit.designer.cs">
@@ -75,6 +77,30 @@
     <Compile Include="Migrations\202303091822040_mig_WriterTitle2.cs" />
     <Compile Include="Migrations\202303091822040_mig_WriterTitle2.designer.cs">
       <DependentUpon>202303091822040_mig_WriterTitle2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303270818035_mig_writerAbout_500.cs" />
+    <Compile Include="Migrations\202303270818035_mig_writerAbout_500.designer.cs">
+      <DependentUpon>202303270818035_mig_writerAbout_500.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303301347229_mig_writerImage_500.cs" />
+    <Compile Include="Migrations\202303301347229_mig_writerImage_500.designer.cs">
+      <DependentUpon>202303301347229_mig_writerImage_500.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304030935520_mig_add_WriterStatus.cs" />
+    <Compile Include="Migrations\202304030935520_mig_add_WriterStatus.designer.cs">
+      <DependentUpon>202304030935520_mig_add_WriterStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304040653342_mig_contentStatus.cs" />
+    <Compile Include="Migrations\202304040653342_mig_contentStatus.designer.cs">
+      <DependentUpon>202304040653342_mig_contentStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304040657157_mig_headingStatus.cs" />
+    <Compile Include="Migrations\202304040657157_mig_headingStatus.designer.cs">
+      <DependentUpon>202304040657157_mig_headingStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304051223472_mig_addMessageClass_1.cs" />
+    <Compile Include="Migrations\202304051223472_mig_addMessageClass_1.designer.cs">
+      <DependentUpon>202304051223472_mig_addMessageClass_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,6 +121,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303091822040_mig_WriterTitle2.resx">
       <DependentUpon>202303091822040_mig_WriterTitle2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303270818035_mig_writerAbout_500.resx">
+      <DependentUpon>202303270818035_mig_writerAbout_500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303301347229_mig_writerImage_500.resx">
+      <DependentUpon>202303301347229_mig_writerImage_500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304030935520_mig_add_WriterStatus.resx">
+      <DependentUpon>202304030935520_mig_add_WriterStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304040653342_mig_contentStatus.resx">
+      <DependentUpon>202304040653342_mig_contentStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304040657157_mig_headingStatus.resx">
+      <DependentUpon>202304040657157_mig_headingStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304051223472_mig_addMessageClass_1.resx">
+      <DependentUpon>202304051223472_mig_addMessageClass_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

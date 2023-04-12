@@ -15,6 +15,7 @@ namespace EntitiyLayer.Concrete
         public string ContentValue { get; set; }
 
         public DateTime ContentDate { get; set; }
+        public bool ContentStatus { get; set; }
 
         //ContentYazar
         //ContentBaşlık
